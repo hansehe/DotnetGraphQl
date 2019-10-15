@@ -1,0 +1,18 @@
+{
+  "host": {
+    "port": 80
+  },
+  "Jwt": {
+    "Issuer": "http://some-issuer:80/"
+  },
+  "amqp": {
+    "hostname": "rabbitmq"
+  },
+  "mqtt": {
+    "hostname": "rabbitmq"
+  },
+  "database": {
+    "hostname": "postgres-db",
+    "port": "5432"
+  }
+}

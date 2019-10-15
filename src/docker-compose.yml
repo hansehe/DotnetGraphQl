@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  dotnet-graphql:
+    image: dotnet-graphql:${VERSION}
+    hostname: dotnet-graphql
+    build:
+      context: .
+      dockerfile: DotnetGraphQl/Services/DotnetGraphQl.Service/Dockerfile
+    networks:
+      - backend_network
+    environment:
+      JWT__KEY: veryVerySecretKey
+      JWT__ISSUER: dotnetgraphql
+    ports:
+      - 5000:80
+
+networks:
+  backend_network:
+    external: true

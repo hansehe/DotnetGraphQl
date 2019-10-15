@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "DotnetGraphQl.Service": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "workingDirectory": "bin/debug/netcoreapp2.2",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5000/status/health"
+    }
+  }
+}

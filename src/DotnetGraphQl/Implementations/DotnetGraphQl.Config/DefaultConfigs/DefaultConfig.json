@@ -1,0 +1,51 @@
+{
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Debug",
+      "Override": {
+        "Microsoft": "Debug",
+        "System": "Warning"
+      }
+    }
+  },
+  "host": {
+    "port": 5000,
+    "migrateDbSchema": true
+  },
+  "Jwt": {
+    "Key": "veryVerySecretKey",
+    "Issuer": "dotnetgrapql"
+  },
+  "graphQl": {
+    "enableMetrics": true,
+    "exposeExceptions": true
+  },
+  "database": {
+    "type": "postgres",
+    "user": "DotnetGraphQl",
+    "password": "dbpassword",
+    "adminUser": "admin",
+    "adminPassword": "admin",
+    "hostname": "localhost",
+    "port": 5433,
+    "pooling": true
+  },
+  "amqp": {
+    "user": "amqp",
+    "password": "amqp",
+    "hostname": "localhost",
+    "port": 5672,
+    "virtualhost": "amqp",
+    "inputQueue": "DotnetGraphQl_InputQueue",
+    "errorQueue": "errors",
+    "directExchange": "RebusDirect",
+    "topicExchange": "RebusTopic"
+  },
+  "mqtt": {
+    "user": "mqtt",
+    "password": "mqtt",
+    "hostname": "localhost",
+    "port": 1883,
+    "clientId": "DotnetGraphQl"
+  }
+}
